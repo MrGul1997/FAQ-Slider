@@ -7,4 +7,6 @@ FAQ Slider created using jQuery HTML CSS.
 
 2-Download minified cdn from above url.
 
-3-Then Enjoy.
+3-Then paste jquery-3.4.1.min.js ïn cloning folder.
+
+4-Then Enjoy.
