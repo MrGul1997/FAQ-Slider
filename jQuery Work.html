@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/149cda1836.js" crossorigin="anonymous"></script>
+    <title>jQuery FAQ</title>
+    <style>
+        *{
+            list-style: none;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(faq.png);
+        }
+        .con{
+            width: 60%;
+            height: 83vh;
+            /* border: 1px solid; */
+        }
+        .con>h2{
+            background: cadetblue;
+            text-align: center;
+            color: white;
+            padding: 1vw;
+        }
+
+        h3{
+            background: lightgray;
+            
+        }
+
+        p{
+            background: lightskyblue;
+        }
+
+        .q{
+            font-size: 2vw;
+            margin-bottom: 8px;
+            background-color: rgb(122, 171, 245);
+            /* box-shadow: 0px 0px 8px 1px black; */
+            color: white;
+            padding: 10px 10px;
+            border-radius: 8px 3px 4px 2px;
+        }
+
+        .a{
+            font-size: 2vw;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 8px 1px black;
+            color:black;
+            padding: 10px 10px;
+            border-radius: 0px 3px 4px 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FAQ Slider</h1>
+    <div class="con">
+        <h2>FAQ Slider Project</h2>
+        <!-- <div class="question"><h3><i class="fas fa-angle-double-right"></i> How are you ?</h3> 
+            <p>I am fine.</p>
+        </div>
+
+        <div><h3><i class="fas fa-angle-double-right"></i> Who are you ?</h3> 
+            <p>I am Gulfam.</p>
+        </div>
+
+        <div><h3><i class="fas fa-angle-double-right"></i> Where you live ?</h3> 
+            <p>I live in Gujranwala</p>
+        </div>
+
+        <div><h3><i class="fas fa-angle-double-right"></i> What is your country name ?</h3> 
+            <p>My country name is Pakistan.</p>
+        </div>
+
+        <div><h3><i class="fas fa-angle-double-right"></i> What is your workplace ?</h3> 
+            <p>My workplace is Abacus Consulting</p>
+        </div>
+
+        <div><h3><i class="fas fa-angle-double-right"></i> Are you happy ?</h3> 
+            <p>I am happy.</p>
+        </div> -->
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> How are you ?</li>
+        <li class="a"><b>Answer:</b> I am fine.</li>
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> Who are you?</li>
+        <li class="a"><b>Answer:</b> I am Gulfam</li>
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> Where you live?</li>
+        <li class="a"><b>Answer:</b> I live in Lahore.</li>
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> What is your country Name ?</li>
+        <li class="a"><b>Answer:</b> Pakistan</li>
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> What is your workplace ?</li>
+        <li class="a"><b>Answer:</b> Abacus Consulting</li>
+        <li class="q"><i class="fas fa-angle-double-right"></i> <b>Question:</b> Are you happy ?</li>
+        <li class="a"><b>Answer:</b> Yes</li>
+    </div>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $("li.q").on("click" , function (){
+      $(this).next().slideToggle(100).siblings("li.a").slideUp(100)
+      var img = $(this).children('i')
+      $('li.q > img').not(img).removeClass("rotate")
+      $(img).toggleClass("rotate")
+    })
+  }) 
+    </script>
+</body>
+</html>
